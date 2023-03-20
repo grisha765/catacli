@@ -57,7 +57,8 @@ elif [ "$2" = "folder" ]; then
 else
 	echo "Available launch arguments for the utility:
 install = download the game from the selected branch,
-uninstall = uninstall the game from the selected branch.
+uninstall = uninstall the game from the selected branch,
+folder = open the folder with the installed game.
 "
 	exit
 fi
