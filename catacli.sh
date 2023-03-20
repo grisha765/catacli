@@ -52,6 +52,8 @@ elif [ "$2" = "uninstall" ]; then
 	echo "Removal of ${name} completed successfully!"
 	rm $HOME/.cache/catacli.ver
 	exit
+elif [ "$2" = "folder" ]; then
+	xdg-open $HOME/.local/share/$name
 else
 	echo "Available launch arguments for the utility:
 install = download the game from the selected branch,
