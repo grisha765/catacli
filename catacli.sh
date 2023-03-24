@@ -20,7 +20,7 @@ fi
 # установка игры
 if [ "$2" = "install" ]; then
 	if test -d $HOME/.local/share/$name; then
-		echo "Игра ${name} уже установлена"
+		echo "Game ${name} is already installed!"
 		exit
 	elif ! test -d $HOME/.local/share/$name; then
 		# скачивание игры
