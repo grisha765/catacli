@@ -81,7 +81,11 @@ elif [ "$2" = "update" ]; then
 		[ -d $HOME/.local/share/$name ] || mkdir -p $HOME/.local/share/$name
 		tar -xzf /tmp/$tar_fresh -C $HOME/.local/share/$name --strip-components=1
 		wget -O $HOME/.local/share/$name/icon.png https://play-lh.googleusercontent.com/GpliYC38XP6cLxg6qVrWoHPI5ksaTnAVxy6fpS51p5yo46hJj5rZgqZH95-gYve0wdXH
-		
+		read -r -p "Do you want to delete the archive with the game after installation? [Y/n] " response
+		if [[ $input =~ ^[Yy]$|^$ ]]; then
+			rm -rf /tmp/$tar_fresh
+		fi
+  
 		# создание символической ссылки на папку с настройками
 		ln -s $HOME/.config/$name $HOME/.local/share/$name/config 
 		# папка с сохранениями
