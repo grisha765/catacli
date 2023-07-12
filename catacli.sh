@@ -95,6 +95,7 @@ elif [ "$2" = "update" ]; then
 		rm -rf $HOME/.local/share/$name/data/sound 
 		ln -s $HOME/.$name/sound $HOME/.local/share/$name/data/sound
 		echo "Update for ${name} successfully installed!"
+  		echo "${fresh}" > $HOME/.cache/catacli.ver
 		exit
 	elif [ "${ver}" = "${fresh}" ]; then
 		echo "There are currently no game updates."
