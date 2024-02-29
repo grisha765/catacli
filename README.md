@@ -15,6 +15,7 @@ chmod +x catacli.sh
 ### Usage
 
 1. **Installation**: Install the game from the selected branch (stable or experimental).
+
 ```shell
 ./catacli.sh {--stable\--exp} install
 ```
